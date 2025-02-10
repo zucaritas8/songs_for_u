@@ -1,14 +1,24 @@
-#first-sec {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    flex-direction: column;
 }
 
-.subscribe {
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.containerr {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -22,7 +32,7 @@
     box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
 }
   
-.subscribe:after {
+.containerr:after {
     position: absolute;
     content: "";
     right: -10px;
@@ -34,7 +44,7 @@
     border-bottom: 10px solid #000000;
 }
   
-.subscribe p {
+.containerr p {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
@@ -42,7 +52,7 @@
     line-height: 28px;
 }
   
-.subscribe input {
+.containerr input {
     bottom: 30px;
     border: none;
     border-bottom: 1px solid #d4d4d4;
@@ -52,13 +62,13 @@
     transition: all .25s ease;
 }
   
-.subscribe input:focus {
+.containerr input:focus {
     outline: none;
     border-bottom: 1px solid #000000;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
 }
 
-#playMusic {
+#enter {
     margin-top: 10%;
     --glow-color: rgb(255, 176, 235);
     --glow-spread-color: rgba(255, 121, 188, 0.781);
@@ -80,7 +90,7 @@
     transition: all 0.3s;
 }
    
-#playMusic::after {
+#enter::after {
     pointer-events: none;
     content: "";
     position: absolute;
@@ -94,7 +104,7 @@
     transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
 }
    
-#playMusic:hover {
+#enter:hover {
     color: var(--btn-color);
     background-color: var(--glow-color);
     box-shadow: 0 0 1em .25em var(--glow-color),
@@ -102,17 +112,122 @@
            inset 0 0 .75em .25em var(--glow-color);
 }
    
-#playMusic:active {
+#enter:active {
     box-shadow: 0 0 0.6em .25em var(--glow-color),
            0 0 2.5em 2em var(--glow-spread-color),
            inset 0 0 .5em .25em var(--glow-color);
 }
 
-#second-sec {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
+/* Ocultar las secciones al inicio */
+.hidden {
+    display: none;
 }
 
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border-radius: 14px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  ;
+}
 
+.bg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 290px;
+  height: 390px;
+  z-index: 2;
+  background: rgba(255, 255, 255, .95);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid rgb(255, 255, 255);
+  color: #000000;
+}
+
+.textt {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+}
+
+.cupido {
+    width: 160px;
+}
+
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #ff587d;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+#but {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 71, 111, 0.623);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#but:hover {
+    box-shadow: 0 0 15px 5px rgba(255, 100, 139, 0.795);
+}
+
+#but.prev {
+    left: 40%;
+}
+
+#but.next {
+    right: 40%;
+}

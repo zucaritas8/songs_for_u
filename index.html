@@ -1,43 +1,81 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>happy birthday Tahicin</title>
+    <title>Feliz San Valentin</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <section id="first-sec" > 
-            <div class="subscribe">
-                    <p>HOLA!!</p>
-                    <input placeholder="Tu primer nombre por favor" class="subscribe-input" id="nombreUsuario" name="name" type="name">   
-                <br><br>
-                <button id="playMusic" click="yes()">
-                    Click Here 
-                </button>
+
+    <!-- Sección de bienvenida con el input -->
+    <section id="inicio">
+        <div class="containerr">
+        <h4>HEY TIENES UN PEQUEÑO MENSAJE!</h4>
+        <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre">
+        <button id="enter">Ingresar</button>
+        </div>
+    </section>
+
+    <!-- Sección para Mariana -->
+    <section id="seccion2" class="hidden">
+        <div class="card">
+            <div class="carousel-item active">
+            <div class="bg">
+                <h2>Hola, Mariana!</h2>
+                <p class="textt">Lastimosamente hoy, cupido no esta de nuestro lado.</p>
+                <img src="img/cupibat.png" alt="cupido" class="cupido">
+                <p>pipipipi.</p>
+                <p>pero igual te voy a felicitar.</p>
+            </div>
+            <div class="blob"></div> 
             </div> 
-        </section>
 
-        <section id="second-sec" style="display: none;">
-            <h2>Bienvenida, Mariana!</h2>
-            <p>Esta es tu sección especial.</p>
-        </section>
-
-        <section id="third-sec" style="display: none;">
-            <h2>Bienvenida, Andrea!</h2>
-            <p>Esta es tu sección especial.</p>
-        </section>
-
-        <section id="fourth-sec" style="display: none;">
+            <div class="carousel-item active">
+                <div class="bg">
+                    <p class="textt2">Lastimosamente hoy, cupido no esta de nuestro lado.</p>
+                    <img src="img/cupibat.png" alt="cupido" class="cupido">
+                    <p>pipipipi.</p>
+                    <p>pero igual te voy a felicitar.</p>
+                </div>
+                <div class="blob"></div>   
+            </div>
+            
             <audio id="musica" loop>
-                 <source src="song/potaxie.mpeg" type="audio/mpeg">
-            </audio>
+                <source src="song/UIFY-Potaxie.mpeg" type="audio/mpeg">
+            </audio> 
+        </div>
+        <button id="but" class="prev" onclick="prevSlide()">❮</button>
+        <button id="but" class="next" onclick="nextSlide()">❯</button>
+    </section>
 
-            <h2>Bienvenida, Tahis!</h2>
-            <p>Esta es tu sección especial.</p>
-        </section>
-    </header>
+    <!-- Sección para Andrea -->
+    <section id="seccion3" class="hidden">
+        <div class="card">
+            <div class="bg">
+                <h2>Hola, Andrea!</h2>
+                <p class="textt">Lastimosamente hoy, cupido no esta de nuestro lado.</p>
+                <img src="img/cupido.png" alt="cupido" class="cupido">
+                <p>pipipipi.</p>
+                <p>pero igual te voy a felicitar.</p>
+            </div>
+            <div class="blob"></div>
+        </div>
+    </section>
+
+    <!-- Sección para Tahis -->
+    <section id="seccion4" class="hidden">
+        <div class="card">
+            <div class="bg">
+                <h2>Hola, Tahis!</h2>
+                <p class="textt">Lastimosamente hoy, cupido no esta de nuestro lado.</p>
+                <img src="img/cupido.png" alt="cupido" class="cupido">
+                <p>pipipipi.</p>
+                <p>pero igual te voy a felicitar.</p>
+            </div>
+            <div class="blob"></div>
+        </div>
+    </section>
 
     
 
