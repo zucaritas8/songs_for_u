@@ -1,30 +1,24 @@
-// scripts.js
-document.addEventListener('DOMContentLoaded', function () {
-    const sparkleBg = document.querySelector('.sparkle-bg');
-    const sparkleCount = 200; // Número de chispas
-    for (let i = 0; i < sparkleCount; i++) {
-        const sparkle = document.createElement('div');
-        sparkle.classList.add('sparkle');
-        sparkle.style.top = Math.random() * 100 + '%';
-        sparkle.style.left = Math.random() * 100 + '%';
-        sparkle.style.animationDelay = `${Math.random() * 2}s`; // Retraso aleatorio para cada chispa
-        sparkleBg.appendChild(sparkle);
-    }
-});
-
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("playMusic").addEventListener("click", function() {
-        let audio = document.getElementById("musica");
+        let nombre = document.getElementById("nombreUsuario").value.trim().toLowerCase();
         let inicio = document.getElementById("first-sec");
-        let segundaSeccion = document.getElementById("second-sec");
+        let audio = document.getElementById("musica");
 
-        // Reproduce la música
-        audio.play();
-
-        // Oculta la primera sección
+        // Ocultar la sección de inicio
         inicio.style.display = "none";
 
-        // Muestra la segunda sección
-        segundaSeccion.style.display = "block";
+        // Reproducir música
+        audio.play();
+
+        if (nombre === "Mariana") {
+            document.getElementById("second-sec").style.display = "block";
+        } else if (nombre === "Andrea") {
+            document.getElementById("third-sec").style.display = "block";
+        } else if (nombre === "Tahis") {
+            document.getElementById("fourth-sec").style.display = "block";
+        } else {
+            alert("Nombre no reconocido. Intenta de nuevo.");
+            inicio.style.display = "block"; // Volver a mostrar si el nombre no es válido
+        }
     });
 });

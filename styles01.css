@@ -1,14 +1,28 @@
-#first-sec {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    flex-direction: column;
 }
 
-.subscribe {
+.subtitle {
+    font-size: 1px;
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.containerr {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -22,7 +36,7 @@
     box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
 }
   
-.subscribe:after {
+.containerr:after {
     position: absolute;
     content: "";
     right: -10px;
@@ -34,7 +48,7 @@
     border-bottom: 10px solid #000000;
 }
   
-.subscribe p {
+.containerr p {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
@@ -42,7 +56,7 @@
     line-height: 28px;
 }
   
-.subscribe input {
+.containerr input {
     bottom: 30px;
     border: none;
     border-bottom: 1px solid #d4d4d4;
@@ -52,13 +66,13 @@
     transition: all .25s ease;
 }
   
-.subscribe input:focus {
+.containerr input:focus {
     outline: none;
     border-bottom: 1px solid #000000;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
 }
 
-#playMusic {
+#enter {
     margin-top: 10%;
     --glow-color: rgb(255, 176, 235);
     --glow-spread-color: rgba(255, 121, 188, 0.781);
@@ -80,7 +94,7 @@
     transition: all 0.3s;
 }
    
-#playMusic::after {
+#enter::after {
     pointer-events: none;
     content: "";
     position: absolute;
@@ -94,7 +108,7 @@
     transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
 }
    
-#playMusic:hover {
+#enter:hover {
     color: var(--btn-color);
     background-color: var(--glow-color);
     box-shadow: 0 0 1em .25em var(--glow-color),
@@ -102,17 +116,13 @@
            inset 0 0 .75em .25em var(--glow-color);
 }
    
-#playMusic:active {
+#enter:active {
     box-shadow: 0 0 0.6em .25em var(--glow-color),
            0 0 2.5em 2em var(--glow-spread-color),
            inset 0 0 .5em .25em var(--glow-color);
 }
 
-#second-sec {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
+/* Ocultar las secciones al inicio */
+.hidden {
+    display: none;
 }
-
-

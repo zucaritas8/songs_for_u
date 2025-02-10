@@ -8,32 +8,39 @@
 
 <body>
     <header>
-        <section id="first-sec" >           
-            <button id="playMusic" onclick="click()">
-                Click Here 
-            </button>
+        <section id="first-sec" > 
+            <div class="subscribe">
+                    <p>HOLA!!</p>
+                    <input placeholder="Tu primer nombre por favor" class="subscribe-input" id="nombreUsuario" name="name" type="name">   
+                <br><br>
+                <button id="playMusic" click="yes()">
+                    Click Here 
+                </button>
+            </div> 
         </section>
 
         <section id="second-sec" style="display: none;">
+            <h2>Bienvenida, Mariana!</h2>
+            <p>Esta es tu sección especial.</p>
+        </section>
+
+        <section id="third-sec" style="display: none;">
+            <h2>Bienvenida, Andrea!</h2>
+            <p>Esta es tu sección especial.</p>
+        </section>
+
+        <section id="fourth-sec" style="display: none;">
             <audio id="musica" loop>
                  <source src="song/potaxie.mpeg" type="audio/mpeg">
             </audio>
-            <div class="sparkle-bg"></div>
-            <div class="heart-container top-left">
-                <img src="img/heart.png" class="heart">
-            </div>
-            <div class="heart-container top-right">
-                <img src="img/heart.png" class="heart">
-            </div>
-            <div class="heart-container bottom-left">
-                <img src="img/heart.png" class="heart">
-            </div>
-            <div class="heart-container bottom-right">
-                <img src="img/heart.png" class="heart">
-            </div>
-    <script src="script01.js"></script>
+
+            <h2>Bienvenida, Tahis!</h2>
+            <p>Esta es tu sección especial.</p>
         </section>
     </header>
+
+    
+
     <script src="script.js"></script>
 </body>
 </html>
